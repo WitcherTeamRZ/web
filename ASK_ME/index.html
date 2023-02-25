@@ -23,7 +23,10 @@
 		function refresh() {   
 			var fileName = location.href.split("/").slice(-1).toString().replace(".html", "").split("?")[0];
 			var rand = Math.floor(Math.random() * 10000)
-			document.getElementById("imgId").src=fileName+".jpg?"+rand;
+			if(fileName != "")
+			{
+				document.getElementById("imgId").src=fileName+".jpg?"+rand;
+			}
 		}
 		refresh();
 	</script>
