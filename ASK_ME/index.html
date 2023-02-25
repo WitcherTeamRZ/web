@@ -1,9 +1,30 @@
 <html>
 	<head>
-		<title>Rappelz</title>
+		<title>Witcher-RZ</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<style>
+		div {
+		  background-color: black;
+		  width: 637px;
+		  height: 650px;
+		  overflow: scroll;
+		}
+		img {
+		  width: 620px;
+		}
+	</style>
 	</head>
-		<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-		<img src="WitcherTeamRZ.jpg" width="611" height="625" alt="">
+	<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+		<div>
+			<img id='imgId' src="index.jpg" alt="">
+		</div>
 	</body>
+	<script type='text/javascript'>
+		function refresh() {   
+			var fileName = location.href.split("/").slice(-1).toString().replace(".html", "").split("?")[0];
+			var rand = Math.floor(Math.random() * 10000)
+			document.getElementById("imgId").src=fileName+".jpg?"+rand;
+		}
+		refresh();
+	</script>
 </html>
