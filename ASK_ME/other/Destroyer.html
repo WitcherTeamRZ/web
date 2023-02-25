@@ -14,9 +14,17 @@
 		}
 	</style>
 	</head>
-		<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+	<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 		<div>
-			<img src="Destroyer.jpg" alt="">
+			<img id='imgId' src="index.jpg" alt="">
 		</div>
 	</body>
+	<script type='text/javascript'>
+		function refresh() {   
+			var fileName = location.href.split("/").slice(-1).toString().replace(".html", "").split("?")[0];
+			var rand = Math.floor(Math.random() * 10000)
+			document.getElementById("imgId").src=fileName+".jpg?"+rand;
+		}
+		refresh();
+	</script>
 </html>
